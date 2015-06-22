@@ -1,0 +1,866 @@
+/*=============================
+=            FONTS            =
+=============================*/
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic');
+
+
+
+/*===================================
+=            BASE STYLES            =
+===================================*/
+body {
+    font-family: 'Lato';
+}
+
+section, header, footer, main, article, nav, aside {
+    position: relative;
+}
+
+a {
+    outline: none !important;
+    text-decoration: none !important;
+    -webkit-transition: all 225ms ease;
+    -moz-transition: all 225ms ease;
+    transition: all 225ms ease;
+    text-decoration: none !important;
+}
+
+.force-gpu * {
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+#site-wrap {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    opacity: 0;
+    -webkit-transition: all 650ms ease;
+    -moz-transition: all 650ms ease;
+    transition: all 650ms ease;
+}
+
+/* THIS IS FOR UNDER CONSTRUCTION STUFF - REMOVE WHEN DONE */
+#site-wrap #under-construction {
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    z-index: 9999999999999;
+    position: absolute;
+}
+
+#under-construction #warning-stripes-first {
+    background: url('../img/warning-stripes.png');
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    top: 10%;
+    -moz-transform: skewY(-3deg); 
+    -webkit-transform: skewY(-3deg);
+    -ms-transform: skewY(-3deg);
+    -o-transform: skewY(-3deg);
+    transform: skewY(-3deg);
+}
+
+#under-construction #warning-text {
+    position: fixed;
+    font-size: 3.5em;
+    color: white;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+#under-construction #warning-stripes-second {
+    background: url('../img/warning-stripes.png');
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    bottom: 10%;
+    -moz-transform: skewY(-3deg); 
+    -webkit-transform: skewY(-3deg);
+    -ms-transform: skewY(-3deg);
+    -o-transform: skewY(-3deg);
+    transform: skewY(-3deg);
+}
+
+.show-site #site-wrap {
+    opacity: 1;
+}
+
+
+
+
+/*================================
+=            SITE NAV            =
+================================*/
+#site-nav {
+    margin: 0;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 888888;
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    transform: translateY(-100%);
+    -webkit-transition: all 225ms ease;
+    -moz-transition: all 225ms ease;
+    transition: all 225ms ease;
+}
+.show-nav #site-nav {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+}
+#site-nav .navbar-brand i { color: rgb(255, 69, 69); }
+#site-nav a { color: #444; }
+#site-nav a:hover { color: rgb(133, 216, 206); }
+
+
+
+
+/*======================================
+=            CALL TO ACTION            =
+======================================*/
+#call-to-action {
+    text-align: center;
+    height: 100vh;
+    min-height: 800px;
+    margin-bottom: 250px;
+}
+
+#call-to-action h1 {
+    position: relative;
+    left: 50%;
+    width: 100%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -100%);
+    -moz-transform: translate(-50%, -100%);
+    transform: translate(-50%, -100%);
+    color: #fff;
+    max-width: 850px;
+    z-index: 888888;
+    margin: 0;
+    font-size: 67px;
+    font-weight: 200;
+}
+
+#call-to-action .main-text {
+    position: absolute;
+    left: 0;
+    top: 10%;
+    width: 100%;
+}
+
+#call-to-action h2 {
+    font-size: 92px;
+    font-weight: 200;
+    margin: 0;
+}
+#call-to-action p.lead {
+    font-size: 21px;
+    font-weight: 400;
+}
+
+#call-to-action .zoomed-action {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    max-width: 900px;
+    width: 100%;
+    -webkit-transform: translate3d(-50%, 0, 0);
+    -moz-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
+}
+#call-to-action .zoomed-action-overlay {
+    position: absolute;
+    content: ' ';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: block;
+    opacity: 0;
+}
+
+#call-to-action .zoomed-action img {
+    width: 100%;
+    height: auto;
+}
+
+.top-mac {
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom: 100%;
+    height: 30px;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    background: rgb(3, 3, 3);
+}
+
+.top-mac i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #828282;
+    font-size: 8px;
+}
+
+.zoomed-action img {
+    border-right: solid 30px rgb(3, 3, 3);
+    border-left: solid 30px rgb(3, 3, 3);
+    border-bottom: solid 30px rgb(3, 3, 3);
+}
+
+.bottom-mac {
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 100%;
+    height: 80px;
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+    background: rgb(208, 208, 208);
+}
+
+.bottom-mac i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+    color: rgb(3, 3, 3);
+}
+
+
+/*==================================
+=            INFO GROUP            =
+==================================*/
+.info-group {
+    /*margin-bottom: 250px;*/
+}
+
+
+/*===============================
+=           PARALLAX            =
+===============================*/
+#parallax-first {
+    position: relative;
+    overflow: hidden;
+    height: 70vh;
+}
+
+#parallax-second {
+    position: relative;
+    overflow: hidden;
+    height: 70vh;
+}
+
+#parallax-first > div,
+#parallax-second > div {
+    position: relative;
+    height: 200%;
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+}
+
+.parallax-first-bg {
+    background-image: url(../img/mac7.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.parallax-second-bg {
+    background-image: url(../img/mac8.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+/*===============================
+=             ABOUT             =
+===============================*/
+#about {
+    padding-bottom: 200px;
+}
+
+.about-img {
+	border: 3px solid #85D8CE;
+}
+
+/*===============================
+=          EXPERIENCES          =
+===============================*/
+#experiences {
+    height: 60vh;
+}
+
+#container-experiences {
+    position: relative;
+    top: 10%;
+}
+
+#work-experience {
+    right: 0;
+    top: 0;
+    opacity: 1;
+}
+
+.city {
+    color: #85D8CE;
+}
+
+/*===============================
+=           ABILITIES           =
+===============================*/
+#abilities {
+    padding-top: 100px;
+    padding-bottom: 400px;
+}
+
+#skills h4 {
+    display: inline-block;
+}
+
+.css-percent,
+.html-percent,
+.php-percent,
+.jquery-percent,
+.javascript-percent,
+.xml-percent,
+.json-percent,
+.bootstrap-percent,
+.wordpress-percent,
+.less-percent,
+.sass-percent,
+.angular-percent {
+    /*width: 100%;*/
+    display: inline-block;
+    height: 30px;
+    font-size: 20px;
+    background: -webkit-linear-gradient(left, #085078 , #85D8CE); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #085078 , #85D8CE); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #085078 , #85D8CE); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #085078 , #85D8CE); /* Standard syntax */
+    color: white;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.sublime-text-percent,
+.git-percent,
+.filezilla-percent,
+.poedit-percent,
+.photoshop-percent,
+.dreamweaver-percent,
+.ms-office-percent,
+.os-x-percent,
+.windows-percent,
+.mamp-percent,
+.scout-percent {
+    display: inline-block;
+    height: 30px;
+    font-size: 20px;
+    background: -webkit-linear-gradient(left, #283048 , #859398); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #283048 , #859398); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #283048 , #859398); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #283048 , #859398); /* Standard syntax */
+    color: white;
+    text-align: right;
+    padding-right: 20px;
+}
+
+
+/*===============================
+=            PROJECTS           =
+===============================*/
+#projects:before {
+    content: ' ';
+    display: block;
+    height: 200px;
+    width: 100%;
+    background: -webkit-linear-gradient(left, #085078 , #85D8CE); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #085078 , #85D8CE); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #085078 , #85D8CE); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #085078 , #85D8CE); /* Standard syntax */
+    -moz-transform: skewY(-3deg); 
+    -webkit-transform: skewY(-3deg);
+    -ms-transform: skewY(-3deg);
+    -o-transform: skewY(-3deg);
+    transform: skewY(-3deg);
+    position: absolute;
+    left: 0;
+    top: -150px;
+    overflow: hidden;
+    z-index: 99;
+}
+
+#projects {
+    background: -webkit-linear-gradient(left, #085078 , #85D8CE); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #085078 , #85D8CE); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #085078 , #85D8CE); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #085078 , #85D8CE); /* Standard syntax */
+    color: #FFFFFF;
+    padding-top: 100px;
+    padding-bottom: 150px;
+}
+
+#projects:after {
+    content: ' ';
+    display: block;
+    height: 200px;
+    width: 100%;
+    background: -webkit-linear-gradient(left, #085078 , #85D8CE); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #085078 , #85D8CE); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #085078 , #85D8CE); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #085078 , #85D8CE); /* Standard syntax */
+    -moz-transform: skewY(-3deg); 
+    -webkit-transform: skewY(-3deg);
+    -ms-transform: skewY(-3deg);
+    -o-transform: skewY(-3deg);
+    transform: skewY(-3deg);
+    position: absolute;
+    left: 0;
+    bottom: -50px;
+    overflow: hidden;
+    z-index: 99;
+}
+
+#projects .row {
+    margin-bottom: 70px;
+}
+
+#projects h3 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.project-box {
+    position: relative;
+    display: inline-block;
+    width: 400px;
+    height: 300px;
+}
+
+.project-box a h4 {
+    color: white;
+    margin-top: 40px;
+}
+
+.project-box a p {
+    color: white;
+    font-size: 1.4em;
+}
+
+.project-img-1,
+.project-img-2,
+.project-img-3,
+.project-img-4 {
+    border: 5px solid white;
+}
+
+.project-info-1,
+.project-info-2,
+.project-info-3,
+.project-info-4 {
+    width: 410px;
+    height: 310px;
+    opacity: 0;
+    position: absolute;
+    display: block;
+    border: 5px solid white;
+    background: rgba(40, 48, 72, 0.8);
+    padding: 30px;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+a .project-text-1,
+a .project-text-2,
+a .project-text-3,
+a .project-text-4 {
+    font-size: 2em;
+    color: white;
+}
+
+.project-hr-1,
+.project-hr-2,
+.project-hr-3,
+.project-hr-4 {
+    position: absolute;
+    border-bottom: 1px solid white;
+    width: 85%;
+    top: 70px;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/*===============================
+=            CONTACT            =
+===============================*/
+#contact {
+    padding-top: 200px;
+    padding-bottom: 100px;
+}
+
+#social {
+
+}
+
+#social a i {
+    font-size: 80px;
+    float: left;
+    margin-right: 20px;
+    color: #696f7e;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+}
+
+#social a span {
+    line-height: 80px;
+    font-size: 15px;
+    color: #696f7e;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+}
+
+#social a:hover i,
+#social a:hover span {
+    color: #283048;
+}
+
+#form {
+    margin-top: 100px;
+}
+
+#form .btn {
+    width: 150px;
+    height: 80px;
+}
+
+#contact-form-confirmation {
+    margin-bottom: 30px;
+}
+
+#btn-show-contact-form {
+    position: relative;
+}
+
+#btn-send-contact-form {
+    opacity: 0;
+    display: none;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+.btn-contact {
+    position: relative;
+    color: white;
+    background: #4194a0;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+}
+
+.btn-contact:hover {
+    background: #85D8CE;
+    color: white;
+}
+
+#contact-form {
+    display: none;
+    top: -100px;
+}
+
+#contact-form textarea {
+    resize: none;
+}
+
+#label-user-validaiton {
+    display: block;
+    text-align: center;
+}
+
+#user-validaiton-box {
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Validation progress circle */
+#progress-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#user-validation-circle {
+    position: relative;
+    top: -100px;
+    border-radius: 50%;
+    behavior: url(PIE.htc); /* IE8 */
+    width: 30px;
+    height: 30px;
+    background: #FFAFBD;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35%;
+}
+
+#backup-validation {
+    display: none;
+}
+
+/* Validation message */
+.form-warning {
+    color: #ED4035;
+    font-style: normal;
+    margin-left: 10px;
+}
+
+.form-success {
+    color: #8BC93C;
+    margin-left: 10px;
+}
+
+.form-error-msg {
+    color: #ED4035;
+    height: 20px;
+}
+
+/*#contact-submit {
+    display: none;
+    margin: 0 auto;
+    width: 100px;
+    height: 50px;
+}*/
+
+/*=======================================
+=            NO SCROLL MAGIC            =
+=======================================*/
+.no-scroll-magic #site-nav {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+    background: rgba(255, 255, 255, 0.9);
+}
+.no-scroll-magic #call-to-action {
+    padding: 0 15px;
+    height: auto;
+    min-height: 0;
+}
+#call-to-action .zoomed-action {
+    width: 100%;
+    max-width: 900px;
+}
+.no-scroll-magic #call-to-action .main-text, .no-scroll-magic #call-to-action .zoomed-action, .no-scroll-magic #call-to-action h1  {
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    -webkit-transform: none;
+    -moz-transform: none;
+    transform: none;
+    margin: 0 auto;
+}
+.no-scroll-magic #call-to-action .main-text {
+    margin: 100px auto 50px;
+}
+.no-scroll-magic #call-to-action h1 {
+    display: none;
+}
+
+.no-scroll-magic .top-mac i {
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+}
+
+.no-scroll-magic .bottom-mac i {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.no-scroll-magic #experiences {
+    height: 100%;
+}
+
+/*===============================
+=           ABILITIES           =
+===============================*/
+.no-scroll-magic .css-percent,
+.no-scroll-magic .html-percent,
+.no-scroll-magic .php-percent,
+.no-scroll-magic .bootstrap-percent,
+.no-scroll-magic .wordpress-percent {
+    width: 100%;
+}
+
+.no-scroll-magic .jquery-percent {
+    width: 90%;
+}
+
+.no-scroll-magic .javascript-percent {
+    width: 70%;
+}
+
+.no-scroll-magic .xml-percent,
+.no-scroll-magic .json-percent,
+.no-scroll-magic .angular-percent {
+    width: 0;
+}
+
+.no-scroll-magic .less-percent {
+    width: 60%;
+}
+
+.no-scroll-magic .sass-percent {
+    width: 80%;
+}
+
+.no-scroll-magic .sublime-percent,
+.no-scroll-magic .git-percent,
+.no-scroll-magic .filezilla-percent,
+.no-scroll-magic .poedit-percent,
+.no-scroll-magic .os-x-percent,
+.no-scroll-magic .windows-percent,
+.no-scroll-magic .mamp-percent,
+.no-scroll-magic .scout-percent {
+    width: 100%;
+}
+
+.no-scroll-magic .photoshop-percent {
+    width: 50%;
+}
+
+.no-scroll-magic .dreamweaver-percent {
+    width: 90%;
+}
+
+.no-scroll-magic .ms-office-percent {
+    width: 70%;
+}
+
+
+/*==============================
+=            FOOTER            =
+==============================*/
+footer {
+    background: -webkit-linear-gradient(left, #85D8CE , #ffd194); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #85D8CE , #ffd194); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #85D8CE , #ffd194); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #85D8CE , #ffd194); /* Standard syntax */
+    padding: 50px 0;
+}
+
+footer p {
+    font-weight: 200;
+    color: #FFFFFF;
+    margin: 0;
+    text-align: center;
+    font-size: 20px;
+}
+
+footer p a {
+    color: white;
+}
+
+
+
+
+/*=====================================
+=            MEDIA QUERIES            =
+=====================================*/
+@media screen and (min-width: 1400px) {
+    /*===============================
+    =          EXPERIENCES          =
+    ===============================*/
+    #experiences {
+        height: 100vh;
+    }
+
+    #work-experience {
+        right: -130%;
+        top: -300px;
+        opacity: 0;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+    #call-to-action h1 {
+        font-size: 53px;
+    }
+    .info-group h2 {
+        font-size: 51px;
+        line-height: 55px;
+    }
+}
+@media only screen and (max-width : 767px) {
+    .info-group h2 span {
+        display: inline;
+        font-weight: 300 !important;
+    }
+    .info-group p {
+        font-size: 22px;
+        line-height: 32px;
+    }
+    .info-group h3 { font-weight: 200; }
+    .info-group img.tall {
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    #call-to-action .links a {
+        width: 100%;
+        display: block;
+        margin: 6px 0;
+    }
+    #call-to-action h1 { font-size: 33px; }
+    #call-to-action .top-part { height: 15px; }
+    #call-to-action .zoomed-action img { border-width: 15px; }
+    #call-to-action .bottom-part { height: 35px; }
+    #call-to-action .bottom-part i { font-size: 20px; }
+    .info-group h2 {
+        font-size: 39px;
+        line-height: 40px;
+    }
+    .info-group p {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    #contact h2 { font-size: 57px; }
+    footer p { font-size: 40px; }
+}
